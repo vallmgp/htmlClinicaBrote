@@ -1,0 +1,429 @@
+  :root{
+    --verde-05:#F4FAF3;
+    --verde-10:#E3F1E2;
+    --verde-20:#CDE7CC;
+    --verde-oscuro:#3d694a;
+    --verde-oscuro-2:#27472d;
+    --rosa-10:#FBE7EE;
+    --rosa-20:#F5C9DA;
+    --rosa-30:#EDA9C2;
+    --crema:#FDFCF9;
+    --texto:#213024;
+
+    --bs-primary: var(--verde-oscuro);
+    --bs-primary-rgb: 46,83,57;
+    --bs-secondary: var(--rosa-30);
+    --bs-secondary-rgb: 237,169,194;
+    --bs-body-bg: var(--crema);
+    --bs-body-color: var(--texto);
+    --bs-body-font-family: 'Manrope', sans-serif;
+    --bs-border-radius: .8rem;
+    --bs-border-radius-lg: 1.2rem;
+  }
+
+  html{ scroll-behavior:smooth; }
+  body{ color:var(--texto); }
+
+  h1,h2,h3,h4,.font-display{
+    font-family:'Manrope', sans-serif;
+    font-weight:600;
+    color:var(--verde-oscuro-2);
+    letter-spacing:-.01em;
+  }
+
+  a{ color:var(--verde-oscuro); }
+
+  :focus-visible{
+    outline:3px solid var(--rosa-30);
+    outline-offset:2px;
+  }
+
+  /* ---------- utilidades de marca ---------- */
+  .bg-verde-05{ background:var(--verde-05); }
+  .bg-verde-10{ background:var(--verde-10); }
+  .bg-verde-oscuro{ background:var(--verde-oscuro); }
+  .bg-rosa-10{ background:var(--rosa-10); }
+  .text-verde-oscuro{ color:var(--verde-oscuro-2); }
+  .text-rosa{ color:#B75C82; }
+
+  .eyebrow{
+    font-weight:700;
+    font-size:.78rem;
+    color:#3E7A54;
+  }
+
+  /* ---------- header ---------- */
+  .site-header{
+    background:var(--verde-05);
+    border-bottom:1px solid var(--verde-20);
+  }
+  .brand-mark{
+    width:44px; height:44px;
+    border-radius:60% 40% 55% 45% / 55% 45% 55% 45%;
+    background:linear-gradient(155deg, var(--verde-oscuro), #4D8863);
+    display:flex; align-items:center; justify-content:center;
+    color:var(--verde-05);
+    font-size:1.3rem;
+    flex:none;
+  }
+  .brand-name{
+    font-family:'Manrope', serif;
+    font-weight:600;
+    font-size:1.3rem;
+    color:var(--verde-oscuro-2);
+    line-height:1.1;
+  }
+  .brand-tagline{
+    font-size:.78rem;
+    color:#4B6A53;
+  }
+  .social-row a{
+    width:34px; height:34px;
+    border-radius:50%;
+    display:inline-flex; align-items:center; justify-content:center;
+    background:var(--verde-10);
+    color:var(--verde-oscuro-2);
+    transition:background .15s ease, color .15s ease, transform .15s ease;
+  }
+  .social-row a:hover{
+    background:var(--rosa-30);
+    color:#5A2740;
+    transform:translateY(-2px);
+  }
+
+  /* ---------- navbar ---------- */
+  .navbar-brote{
+    background:var(--verde-oscuro);
+  }
+  .navbar-brote .nav-link{
+    color:#DDEEDC;
+    font-weight:600;
+    font-size:.94rem;
+  }
+  .navbar-brote .nav-link:hover,
+  .navbar-brote .nav-link.active{
+    color:var(--rosa-20);
+  }
+  .navbar-brote .navbar-toggler{
+    border-color:rgba(255,255,255,.35);
+  }
+
+  /* ---------- carrusel ---------- */
+  :root{
+    --promo-rosa:#AE6484;         /* textos en Ubuntu */
+    --promo-rosa-suave:#C07894;   /* antetítulo */
+    --promo-sage:#6B8A63;         /* títulos en Parisienne */
+    --promo-sage-profundo:#5F7F58;/* palabras resaltadas */
+  }
+  .promo-section{
+    position:relative;
+    background:var(--crema);
+  }
+
+  .promo-section .carousel-item{
+    position:relative;
+    min-height:560px;
+    overflow:hidden;
+  }
+
+  /* Foto de fondo de cada promoción */
+  .promo-slide{
+    position:absolute;
+    inset:0;
+    background-size:cover;
+    background-repeat:no-repeat;
+  }
+  .promo-valoracion{
+    background-image:url("../imagenes/valoracionInicial.JPG");
+    /* un poco más grande que el ancho para esconder el marco blanco
+       que trae la foto en los bordes */
+    background-size:106% auto;
+    background-position:center 58%;
+  }
+  .promo-bienestar{
+    background-image:url("../imagenes/bienestarIntegral.JPG");
+    background-position:center 62%;
+  }
+  .promo-neural{
+    background-image:url("../imagenes/saludNeural.JPG");
+    background-position:center 55%;
+  }
+
+  /* Capa blanca transparente */
+  .promo-velo{
+    position:absolute;
+    inset:0;
+    background:linear-gradient(90deg,
+      rgba(255,255,255,.90) 0%,
+      rgba(255,255,255,.80) 38%,
+      rgba(255,255,255,.52) 70%,
+      rgba(255,255,255,.38) 100%);
+  }
+
+  /* Texto encima de la foto */
+  .promo-contenido{
+    position:relative;
+    z-index:2;
+    min-height:560px;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:flex-start;
+    padding-top:4rem;
+    padding-bottom:4.5rem;
+  }
+  .promo-contenido > *{
+    max-width:34rem;
+  }
+  .promo-antetitulo{
+    font-family:'Ubuntu', sans-serif;
+    font-weight:400;
+    font-size:1.05rem;
+    letter-spacing:.06em;
+    color:var(--promo-rosa-suave);
+    margin-bottom:.25rem;
+  }
+  .promo-titulo{
+    font-family:'Parisienne', cursive;
+    font-weight:400;
+    font-size:clamp(3.2rem, 7vw, 5.4rem);
+    line-height:1.05;
+    letter-spacing:0;
+    color:var(--promo-sage);
+    margin:0 0 1rem -.1em;
+  }
+  .promo-contenido > .promo-titulo{
+    max-width:none;   /* el título va en una sola línea en escritorio */
+  }
+  .promo-texto{
+    font-family:'Ubuntu', sans-serif;
+    font-weight:300;
+    font-size:1.2rem;
+    line-height:1.6;
+    color:var(--promo-rosa);
+    margin-bottom:1.75rem;
+  }
+  .promo-resalta{
+    font-family:'Parisienne', cursive;
+    font-size:1.55em;
+    line-height:1;
+    color:var(--promo-sage-profundo);
+    white-space:nowrap;
+  }
+
+  /* Botón del carrusel: pastilla con borde sage */
+  .btn-promo{
+    font-family:'Ubuntu', sans-serif;
+    font-weight:500;
+    letter-spacing:.03em;
+    color:var(--promo-sage-profundo);
+    background:rgba(255,255,255,.55);
+    border:1.5px solid var(--promo-sage);
+    border-radius:999px;
+    padding:.6rem 1.6rem;
+    transition:background .2s ease, color .2s ease;
+  }
+  .btn-promo:hover,
+  .btn-promo:focus-visible{
+    background:var(--promo-sage);
+    border-color:var(--promo-sage);
+    color:#fff;
+  }
+
+  /* Indicadores y flechas en rosa */
+  .promo-section .carousel-indicators{
+    margin-bottom:1.5rem;
+    z-index:3;
+  }
+  .promo-section .carousel-indicators [data-bs-target]{
+    background-color:var(--promo-rosa);
+    width:9px; height:9px;
+    border-radius:50%;
+    border:0;
+    opacity:.35;
+  }
+  .promo-section .carousel-indicators .active{
+    opacity:1;
+  }
+  .promo-section .carousel-control-prev,
+  .promo-section .carousel-control-next{
+    width:6%;
+    z-index:3;
+  }
+  .carousel-control-prev-icon, .carousel-control-next-icon{
+    background-color:rgba(237,169,194,.85);
+    border-radius:50%;
+    padding:1.2rem;
+    background-size:50% 50%;
+  }
+
+  /* En celular la capa se vuelve pareja y el texto se centra */
+  @media (max-width: 767.98px){
+    .promo-section .carousel-item,
+    .promo-contenido{
+      min-height:480px;
+    }
+    .promo-velo{
+      background:rgba(255,255,255,.80);
+    }
+    .promo-contenido{
+      align-items:center;
+      text-align:center;
+      padding-left:3.5rem;
+      padding-right:3.5rem;
+    }
+    /* En pantallas angostas se acerca la foto para que no se vean
+       las esquinas de la captura (botones de Pinterest) */
+    .promo-valoracion{
+      background-size:170% auto;
+      background-position:center 50%;
+    }
+    .promo-texto{ font-size:1.08rem; }
+    .promo-section .carousel-control-prev,
+    .promo-section .carousel-control-next{
+      width:12%;
+    }
+    .carousel-control-prev-icon, .carousel-control-next-icon{
+      padding:1rem;
+    }
+  }
+
+  /* ---------- sección médicos ---------- */
+  .especialidad-lista .list-group-item{
+    border:none;
+    border-left:3px solid transparent;
+    background:transparent;
+    font-weight:600;
+    color:var(--verde-oscuro-2);
+    padding:.55rem .75rem;
+  }
+  .especialidad-lista .list-group-item:hover{
+    background:var(--rosa-10);
+  }
+  .especialidad-lista .list-group-item.active{
+    background:var(--rosa-10);
+    border-left-color:var(--rosa-30);
+    color:#7A3255;
+  }
+  .especialidad-desc{
+    background:var(--crema);
+    border:1px dashed var(--verde-20);
+    border-radius:.8rem;
+    font-size:.88rem;
+    color:#41594A;
+  }
+
+  .card-medico{
+    border:1.5px solid var(--verde-20);
+    background:var(--crema);
+    border-radius:1.1rem;
+    overflow:hidden;
+    transition:transform .18s ease, box-shadow .18s ease;
+    height:100%;
+  }
+  .card-medico:hover{
+    transform:translateY(-5px);
+    box-shadow:0 14px 28px -18px rgba(46,83,57,.45);
+  }
+  .avatar-medico{
+  width:100%;
+  height:150px;
+  object-fit:cover;
+  background:linear-gradient(135deg, var(--verde-20), var(--rosa-10));
+  }
+  .badge-especialidad{
+    background:var(--rosa-10);
+    color:#7A3255;
+    font-weight:700;
+    font-size:.7rem;
+  }
+
+  /* ---------- mensaje de bienvenida ---------- */
+  .bienvenida-contenido{
+    background:var(--crema);
+    border:1px solid var(--rosa-20);
+    border-radius:1.4rem;
+    box-shadow:0 24px 48px -24px rgba(46,83,57,.35);
+  }
+  .bienvenida-contenido .modal-body{
+    padding:2.5rem 2rem 2.25rem;
+  }
+  .bienvenida-icono{
+    display:inline-flex; align-items:center; justify-content:center;
+    width:56px; height:56px;
+    border-radius:60% 40% 55% 45% / 55% 45% 55% 45%;
+    background:var(--rosa-10);
+    color:var(--promo-rosa);
+    font-size:1.6rem;
+    margin-bottom:.75rem;
+  }
+  .bienvenida-titulo{
+    font-family:'Parisienne', cursive;
+    font-weight:400;
+    font-size:clamp(2.3rem, 7vw, 3rem);
+    line-height:1.15;
+    letter-spacing:0;
+    color:var(--promo-sage);
+    margin-bottom:.75rem;
+  }
+  .bienvenida-texto{
+    font-family:'Ubuntu', sans-serif;
+    font-weight:300;
+    font-size:1.05rem;
+    line-height:1.6;
+    color:var(--promo-rosa);
+    margin:0 auto 1.5rem;
+    max-width:24rem;
+  }
+  .bienvenida-texto strong{
+    font-weight:500;
+  }
+
+  /* ---------- formulario registro ---------- */
+  .registro-panel{
+    background:var(--rosa-10);
+  }
+  .registro-card{
+    background:var(--crema);
+    border-radius:1.2rem;
+    border:1px solid var(--rosa-20);
+  }
+  .form-control:focus, .form-select:focus{
+    border-color:var(--verde-oscuro);
+    box-shadow:0 0 0 .2rem rgba(46,83,57,.15);
+  }
+  .form-check-input:checked{
+    background-color:var(--verde-oscuro);
+    border-color:var(--verde-oscuro);
+  }
+
+  /* ---------- footer ---------- */
+  .site-footer{
+    background:var(--verde-oscuro-2);
+    color:#CFE3D2;
+    border-top:4px solid var(--rosa-30);
+  }
+  .site-footer a{ color:#CFE3D2; }
+  .site-footer a:hover{ color:var(--rosa-20); }
+  .site-footer h6{
+    color:#F4FAF3;
+    font-family:'Fraunces', serif;
+    font-weight:600;
+  }
+  .footer-social a{
+    width:34px; height:34px;
+    border-radius:50%;
+    display:inline-flex; align-items:center; justify-content:center;
+    background:rgba(255,255,255,.08);
+    transition:background .15s ease, transform .15s ease;
+  }
+  .footer-social a:hover{
+    background:var(--rosa-30);
+    color:#3F1B2C;
+    transform:translateY(-2px);
+  }
+
+  @media (prefers-reduced-motion: reduce){
+    html{ scroll-behavior:auto; }
+    .card-medico, .social-row a, .footer-social a{ transition:none; }
+  }
